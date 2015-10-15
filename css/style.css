@@ -1,0 +1,45 @@
+#container
+{
+
+}
+#main
+{
+	height:600px;
+	width:100%;
+ 	/*background:#FEF6C6;*/
+}
+#header
+{
+	width:100%;
+	height:70px;
+	background:#AF671A;
+}
+#headerImg
+{
+	margin-left:20%;
+}
+#sits
+{
+	margin-top:20px;
+	margin-left:10px;
+}
+#logo
+{
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+}
+
+
+
+
+.center
+{
+	text-align:center;
+}
+.reviewInput
+{
+	width:90%;
+	margin-left:5%;
+	text-align: center;
+}

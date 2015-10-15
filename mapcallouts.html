@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="simpson.web project">
+  <meta name="author" content="simpson.web">
+
+  <link rel="stylesheet" href="css/meyerReset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <img src="assets/sits.png"  width="64" height="28"  alt="sits" id="sits" />
+    <a href="index.html"><img src="assets/soo27r.png" width="50" height="50" alt="logo" id="logo" /></a>
+  </div>
+  <div id="main_Callouts">
+
+    <span onclick="loadInferno()" id="loadInferno" ><img src="assets/inferno.png" width="10%" height="10%" alt="" id="" /></span>
+    <span onclick="loadDust2()" id="loadDust2" ><img src="assets/dust2.png" width="15%" height="15%" alt="" id="" /></span>
+
+
+    <div id="inferno" style="display:none"><img src="assets/de_inferno_callouts.jpg" width="100%" alt="inferno" id="infernoImg" /></div>
+    <div id="dust2" style="display:none"><img src="assets/de_dust2_callouts.jpg" width="100%" alt="dust2" id="dust2Img" /></div>
+  </div>
+</div>
+  <script src="js/library/jquery.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function loadInferno(){
+      console.log("clicked");
+      $("#loadInferno").click(function(){
+          $("#inferno").toggle();
+      });
+    }
+    function loadDust2(){
+      console.log("clicked");
+      $("#loadDust2").click(function(){
+          $("#dust2").toggle();
+      });
+    }
+
+
+  </script>
+</body>
+</html>
