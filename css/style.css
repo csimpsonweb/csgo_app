@@ -29,10 +29,6 @@
 	margin-top:10px;
 	margin-right:10px;
 }
-
-
-
-
 .center
 {
 	text-align:center;
@@ -42,4 +38,9 @@
 	width:90%;
 	margin-left:5%;
 	text-align: center;
+}
+.testform
+{
+	width:100%;
+	text-align:center;
 }
