@@ -1,2 +1,0 @@
-# csgo_app
-runningproject
