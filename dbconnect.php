@@ -20,7 +20,7 @@ VALUES ('$firstname', '$lastname', '$email')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-    echo "<br /><br />" . "entry listed as fname:<strong> " . $firstname . "</strong> lname:<strong> " .  $lastname . "</strong> email:<strong> " . $email . "</strong>";
+    //echo "<br /><br />" . "entry listed as fname:<strong> " . $firstname . "</strong> lname:<strong> " .  $lastname . "</strong> email:<strong> " . $email . "</strong>";
     echo "<br /><br /><a href='index.html'><img src='assets/soo27r.png' width='50' height='50' alt='logo' id='logo' /></a>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
