@@ -30,10 +30,10 @@ $round23 = $_POST[round23];
 $round24 = $_POST[round24];
 $round25 = $_POST[round25];
 $round26 = $_POST[round26];
-$round27 = $_POST[firstname];
-$round28 = $_POST[firstname];
-$round29 = $_POST[firstname];
-$round30 = $_POST[firstname];
+$round27 = $_POST[round27];
+$round28 = $_POST[round28];
+$round29 = $_POST[round29];
+$round30 = $_POST[round30];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

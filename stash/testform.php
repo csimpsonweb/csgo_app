@@ -22,18 +22,35 @@
     <a href="index.html"><img src="assets/soo27r.png" width="50" height="50" alt="logo" id="logo" /></a>
   </div>
   <div id="main">
+    <form action="dbconnect.php" method="post">
+        <input type="text" name="firstname" placeholder="firstname" class="testform"><br />
+        <input type="text" name="lastname" placeholder="lastname" class="testform"><br />
+        <input type="text" name="email" placeholder="email" class="testform"><br />
+        <input type="submit">
+    </form>
+    <br />
+    <br />
     <?php
-      include 'connect.php';
 
-      $sql = "SELECT * FROM demoStore";
+      $servername = "localhost";
+      $username = "root";
+      $password = "root";
+      $dbname = "registrations";
+
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, $dbname);
+      // Check connection
+      if (!$conn) {
+          die("Connection failed: " . mysqli_connect_error());
+      }
+
+      $sql = "SELECT id, firstname, lastname FROM entrants";
       $result = mysqli_query($conn, $sql);
 
       if (mysqli_num_rows($result) > 0) {
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
-            //echo "id: " . $row["id"]. "<br>" . " - Round1: " . $row["round1"]. "<br>" . "- Round2: " . $row["round2"]. "<br>";
-            echo '<div id="zonal"><a href="displayPage.php?id='.$row['id'].'">review id: ' . $row['id'].'</a></div>';
-            //echo '<div id="zonal"><a href="displayPage.php?id=1">review id: ' . $row['id'].'</a></div>';
+            echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
         }
       } else {
           echo "0 results";
@@ -43,7 +60,6 @@
     ?>  
   </div>
 </div>
-
   <script src="js/library/jquery.js"></script>
   <script src="js/main.js"></script>
 </body>
