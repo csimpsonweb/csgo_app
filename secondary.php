@@ -4,6 +4,8 @@ $username = "root";
 $password = "root";
 $dbname = "registrations";
 
+$demoname = $_POST[demoname];
+$dateTime = $_POST[dateTime];
 $round1 = $_POST[round1];
 $round2 = $_POST[round2];
 $round3 = $_POST[round3];
@@ -42,14 +44,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO demoStore (round1,round2,round3,round4,round5,round6,round7,round8,round9,round10, round11, round12,round13, round14, round15,round16, round17, round18,round19, round20, round21,round22, round23, round24,round25, round26, round27,round28, round29, round30)
-VALUES ('$round1','$round2','$round3','$round4','$round5','$round6','$round7','$round8','$round9','$round10','$round11','$round12','$round13','$round14','$round15','$round16','$round17','$round18','$round19','$round20','$round21','$round22','$round23','$round24','$round25','$round26','$round27','$round28','$round29','$round30')";
+$sql = "INSERT INTO demoStore (demoname, dateTime, round1,round2,round3,round4,round5,round6,round7,round8,round9,round10, round11, round12,round13, round14, round15,round16, round17, round18,round19, round20, round21,round22, round23, round24,round25, round26, round27,round28, round29, round30)
+VALUES ('$demoname','$dateTime','$round1','$round2','$round3','$round4','$round5','$round6','$round7','$round8','$round9','$round10','$round11','$round12','$round13','$round14','$round15','$round16','$round17','$round18','$round19','$round20','$round21','$round22','$round23','$round24','$round25','$round26','$round27','$round28','$round29','$round30')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-    echo "<br /><br /><a href='index.html'><img src='assets/soo27r.png' width='50' height='50' alt='logo' id='logo' /></a>";
+    header('Location: http://localhost:8888/csgo_app/index.html');
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    
 }
 
 $conn->close();

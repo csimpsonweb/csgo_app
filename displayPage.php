@@ -44,12 +44,6 @@ include 'connect.php';
 
 
     ?>
-    
-
-
-
-
-
   </div>
 </div>
 <script>
